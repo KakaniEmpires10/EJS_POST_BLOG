@@ -1,0 +1,13 @@
+<%- include ('Partial/header') %> 
+<h1>Home</h1>
+<p><%= hcontent %> </p>
+
+<h1 style="text-decoration: underline ;">Post List</h1>
+    <% newPosts.forEach(post => { %>
+        <div class="post-list shadow-sm">
+            <h3 class="border-bottom border-dark"><%= post.title %></h3>
+            <p><%= post.body.substring(0, 150) + "..."%><a href="/post/<%= post.title %>">Read More</a></p>
+        </div>
+    <% }); %>
+
+<%- include ('Partial/footer') %> 
