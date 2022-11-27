@@ -6,7 +6,7 @@
     <% newPosts.forEach(post => { %>
         <div class="post-list shadow-sm">
             <h3 class="border-bottom border-dark"><%= post.title %></h3>
-            <p><%= post.body.substring(0, 150) + "..."%><a href="/post/<%= post.title %>">Read More</a></p>
+            <p><%= post.content.substring(0, 150) + "..."%><a href="/post/<%= post._id %>">Read More</a></p>
         </div>
     <% }); %>
 
